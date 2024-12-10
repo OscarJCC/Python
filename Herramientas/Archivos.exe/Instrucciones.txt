@@ -1,0 +1,83 @@
+1.- Abrir cmd como administrado
+
+2.- Escribir cd y direccion de la carpeta:
+	-- cd C:\Users\HP\OneDrive\Escritorio\Python\Aplicacion.exe\_<carpetadeprograma>_
+
+3.- Escribir:
+>>Con interfas grafica
+	pyinstaller --windowed --clean --onefile --icon=.\CodePython.ico _<nombreprograma>_
+>>Sin interfas grafica
+	pyinstaller --clean --onefile --icon=.\_<direciondelicono>_ _<nombreprograma>_
+--windowed  quita la consola ==== NO USAR SI NO SE A DISEÑADO UNA INTERFAS =======
+--onefile   coloca todo en un .exe
+--icon=     coloca un icono al programa
+--clean     Borra archivos de compilacion
+
+4.- añadir al archivo con winrar el .exe
+	Marcar
+		Opciones de compresion:
+			■Crear un archivo autoextraible
+			■Crear un archivo solido
+			■Bloquear el archivo
+	
+		Metodo de compresion:
+			■La mejor
+
+		Cambiar nombre quitando el .sfx y
+			Archivo1.exe
+
+	Dirigirse a >Avanzado >Autoextrable...
+		General:
+			%temp%
+			■Crear en "Archivo de programa"
+			■Guardar y Restaurar rutas
+	
+		Instalacion:
+			Ejecutar tras la extraccion:
+				Archivo1.exe
+
+		Modos:
+			■Ocultar todo
+
+		Actualizar:
+			■Sobrescribir todos los ficheros
+
+	Colocar una contraceña
+		12345
+
+5.- Crear un bloc de notas y colocar
+	<Nombre de la aplicacion> -p<Contraseña> -d%temp%
+	Archivo1.exe -p12345 -d%temp%
+   Guardarlo como un .bat
+
+6.- añadir al archivo con winrar el .exe creado y el .bat
+	Marcar
+		Opciones de compresion:
+			■Crear un archivo autoextraible
+			■Crear un archivo solido
+			■Bloquear el archivo
+	
+		Metodo de compresion:
+			■La mejor
+
+		Colocar nombre final de la aplicacion
+
+	Dirigirse a >Avanzado >Autoextrable...
+		General:
+			%temp%
+			■Crear en "Archivo de programa"
+			■Guardar y Restaurar rutas
+	
+		Instalacion:
+			Ejecutar tras la extraccion:
+				batch.bat
+
+		Modos:
+			■Ocultar todo
+
+		Actualizar:
+			■Sobrescribir todos los ficheros
+
+		Texto e icono:
+			Editar a gusta
+
